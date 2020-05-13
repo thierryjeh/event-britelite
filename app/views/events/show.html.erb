@@ -6,17 +6,17 @@
 
 <% flash[:success] = nil %>
 
-<h1 class="display-4 ml-5 mt-4 mb-5">Event</h1>
+<h2 class="display-7 ml-5 mt-4 mb-5"><span class="text-info">Event</span></h2>
 
-<h2 class="text-monospace ml-5 my-4"><%= @event.title %></h2>
+<h2 class="font-weight-bold ml-5 my-4"><%= @event.title %></h2>
 
 <p class="lead ml-5">
-  Description : <span class="text-monospace"><%= @event.description %></span><br />
-  Start date : <span class="text-monospace"><%= @event.start_date.strftime("%d/%m/%Y, %H:%M") %></span><br />
-  End date : <span class="text-monospace"><%= (@event.start_date + @event.duration.minutes).strftime("%d/%m/%Y, %H:%M") %></span><br />
-  Duration : <span class="text-monospace"><%= @event.duration %></span> mins<br />
-  Location : <span class="text-monospace"><%= @event.location %></span><br />
-  Price : <span class="text-monospace"><%= @event.price %> €</span>
+ <span class="text-muted"> Description :</span> <span class= "font-weight-normal"><%= @event.description %></span><br />
+ <span class="text-muted"> Start date : </span><span class="text-monospace text-muted"><%= @event.start_date.strftime("%d/%m/%Y, %H:%M") %></span><br />
+  <span class="text-muted">End date : </span><span class="text-monospace text-muted"><%= (@event.start_date + @event.duration.minutes).strftime("%d/%m/%Y, %H:%M") %></span><br />
+  <span class="text-muted">Duration : </span><span class="text-monospace"><%= @event.duration %></span> mins<br />
+  <span class="text-muted">Location : </span><span class="text-monospace"><%= @event.location %></span><br />
+  <span class="text-muted">Price : </span><span class="text-monospace"><%= @event.price %> €</span>
 </p>
 
 <p class="lead ml-5">
@@ -24,5 +24,5 @@
 </p>
 
 <p class="lead ml-5">
-  The event is held by : <%= @event.attendances[0].user.first_name %> <%= @event.attendances[0].user.last_name %>.
+  <span class="font-italic">The event is held by : </span> <%= @event.attendances[0].user.first_name %> <%= @event.attendances[0].user.last_name %>.
 </p>

@@ -27,11 +27,11 @@
 
  
     <div class="card-body">
-      <h5 class="card-title" style="min-height: 50px;""><%= event.title %></h5>
+      <h5 class="card-title" style="min-height: 25px;""><%= event.title %></h5>
       <h6 class="card-subtitle text-muted mb-2">Event n°<%= Event.all.index(event) + 1 %></h6>
       <p class="card-text"><%= event.description %></p>
     </div>
-    <ul class="list-group list-group-flush">
+    <ul class="list-group list-group-flush ">
       <li class="list-group-item">Date : <%= event.start_date.strftime("%d/%m/%Y, %H:%M") %></li>
       <li class="list-group-item">Duration : <%= event.duration %> mins</li>
       <li class="list-group-item">Price : <%= event.price %> €</li>
